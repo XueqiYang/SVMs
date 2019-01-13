@@ -43,7 +43,24 @@ for q = 1:times
         
         trainset = subset_unbiased(train,:);
         trainlabel = sublabel_unbiased(train,1);
-        % mislabel the data by Sherry
+        
+         % mislabel the data by Sherry
+        len = length(trainlabel);  
+        len_get = floor(len*0.1);     % round or cell will also works well as floor
+        rand_index = randperm(len);   % sort the index randomly
+        draw_rand_index = rand_index(1:len_get); % get the frontal 10% of training set
+        for m = 1:len_get
+            index1 = draw_rand_index(m);            
+            trainlabel(index1) = -1*trainlabel(index1);
+            %if trainlabel(m)==-1;
+            %    trainlabel(m) = 1;
+            %elseif trainlabel(m) == 1;
+            %    trainlabel(m) = -1;
+            %end
+        end
+        %  added by Sherry 
+        
+        % mislabel the data by Sherry, discarded
         len = length(trainlabel);  
         len_get = floor(len*0.1);     % round or cell will also works well as floor
         rand_index = randperm(len);   % sort the index randomly
@@ -55,7 +72,7 @@ for q = 1:times
                 trainlabel(m)=-1;
             end
         end
-        %  added end by Sherry        
+        %  added end by Sherry, discarded        
         
         testset = subset_unbiased(test,:);
         testlabel = sublabel_unbiased(test,1);
