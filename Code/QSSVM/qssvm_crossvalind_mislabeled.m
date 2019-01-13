@@ -109,9 +109,4 @@ end
 
 end
 
- = min(MeanAccuracy)
-    stdAcc = std(MeanAccuracy)
-    mTime = mean(AverageTime)
-
-end
 
