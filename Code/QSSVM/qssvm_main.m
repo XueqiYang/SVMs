@@ -60,3 +60,4 @@ clear Australia
 %%this may takes a lot of minutes.
 %%Updated 10-fold crossvalind for qssvm. It is repeated for 10 times.
 [ MeanAccuracy, StdAccuracy ] = qssvm_crossvalind_updated(set_biased, labelset, 10, -5:15, 10);
+%[ MeanAccuracy, StdAccuracy ] = qssvm_crossvalind_mislabeled(set_biased, labelset, 10, -5:15, 10);
