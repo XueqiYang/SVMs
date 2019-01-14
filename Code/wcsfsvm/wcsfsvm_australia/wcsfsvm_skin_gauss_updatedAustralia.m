@@ -8,7 +8,7 @@ clear Australia
 samples = norm_samples';
 
 N=length(label);
-K=100;                %repeating time 
+K=10;                %repeating time 
 % parameters: 
 % logC = 5;
 % logbeta = 1;
@@ -17,7 +17,7 @@ K=100;                %repeating time
 logC = -1:1:6;%2;%6;
 logbeta = -5:1:2;%-2;%2;
 logp = -7:1:1;%-2;%2;
-K_cv = 100;    
+K_cv = 10;    
 iC = 1:length(logC);
 ibeta = 1:length(logbeta);
 ip = 1:length(logp);
@@ -63,7 +63,7 @@ for kk=1:K
           % get the training data
 	      % tmp_xlabel = label(indices == 1);
 	      % xlabel = [ tmp_xlabel(tmp_xlabel == 1, :); tmp_xlabel(tmp_xlabel ~= 1, :)];
-	      % xtrain = samples(indices == 1,:);%£¿£¿
+	      % xtrain = samples(indices == 1,:);%Â£Â¿Â£Â¿
 	      % xtrain = [ xtrain(tmp_xlabel == 1, :); xtrain(tmp_xlabel ~= 1, :)];
 	            
 	        % get the test data
